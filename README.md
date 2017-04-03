@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/clcuevas/pocket_outreach_client.svg?branch=master)](https://travis-ci.org/clcuevas/pocket_outreach_client)
+
 # Pocket-outreach-client
 
 This App is going to be awesome!!!!!!!!!!! [Add content later]
