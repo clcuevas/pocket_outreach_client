@@ -1,0 +1,24 @@
+.ui-navigation-menu {
+  // Update the navbar defaults
+  .navbar {
+    border-radius: 0;
+  }
+
+  .navbar-default {
+    background-color: #f0974c; // soft orange
+
+    .navbar-brand,
+    .navbar-nav > li > a {
+      color: azure;
+    }
+
+    .navbar-brand:hover,
+    .navbar-nav > li > a:hover {
+      color: #f6c093;
+    }
+
+    .navbar-toggle {
+      background-color: #e6e6e6;
+    }
+  }
+}
