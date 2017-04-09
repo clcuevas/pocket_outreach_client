@@ -12,6 +12,7 @@ addons:
       - google-chrome-stable
 
 cache:
+  yarn: true
   directories:
     - node_modules
 
@@ -26,11 +27,11 @@ before_script:
   - sleep 3
 
 install:
-  - npm install
+  - yarn install
   - bower install
 
 script:
-  - npm test
+  - yarn run test
 
 notifications:
   slack: omordn:TmqvxTNAAcwkwWuPIkwR5Lkl
