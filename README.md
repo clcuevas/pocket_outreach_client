@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/clcuevas/pocket_outreach_client.svg?branch=master)](https://travis-ci.org/clcuevas/pocket_outreach_client)
+[![Code Climate](https://codeclimate.com/github/cloudfoundry/membrane.png)](https://codeclimate.com/github/clcuevas/pocket_outreach_client)
 
 # Pocket-outreach-client
 
