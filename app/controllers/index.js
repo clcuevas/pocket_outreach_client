@@ -4,7 +4,8 @@ const { Controller } = Ember;
 
 export default Controller.extend({
   actions: {
-    alertMe() {
+    alertMe(e) {
+      e.preventDefault();
       alert('Yay, it worked!');
     }
   }
