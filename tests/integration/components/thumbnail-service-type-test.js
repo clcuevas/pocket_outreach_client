@@ -1,8 +1,6 @@
-import Ember from 'ember';
-import { moduleForComponent, test } from 'ember-qunit';
+import { moduleForComponent } from 'ember-qunit';
+import test from 'ember-sinon-qunit/test-support/test';
 import hbs from 'htmlbars-inline-precompile';
-
-const { K } = Ember;
 
 moduleForComponent('thumbnail-service-type', 'Integration | Component | thumbnail service type', {
   integration: true
@@ -11,7 +9,7 @@ moduleForComponent('thumbnail-service-type', 'Integration | Component | thumbnai
 test('it renders', function(assert) {
   assert.expect(1);
 
-  this.set('myAction', K);
+  this.set('myAction', () => {});
   this.render(hbs`{{thumbnail-service-type myAction=myAction}}`);
 
   assert.equal(this.$('.js-thumbnail-service-type').length, 1, "component rendered");
@@ -20,25 +18,23 @@ test('it renders', function(assert) {
 test('should properly handle onClick event', function(assert) {
   assert.expect(2);
 
-  let actionCalled = false;
-  this.set('myAction', () => {
-    actionCalled = true;
-  });
+  let stubAction = this.stub();
+  this.set('myAction', stubAction);
 
   this.render(hbs`{{thumbnail-service-type myAction=myAction}}`);
 
-  assert.equal(actionCalled, false, "action has not been called");
+  assert.notOk(stubAction.called, false, "action has not been called");
 
   // Lets perform the onClick event
   this.$('.js-thumbnail-service-type-btn').click();
 
-  assert.equal(actionCalled, true, "action was called successfully");
+  assert.ok(stubAction.calledOnce, true, "action was called successfully");
 });
 
 test('should properly render passed in attrs', function(assert) {
   assert.expect(3);
 
-  this.set('myAction', K);
+  this.set('myAction', () => {});
   this.set('myTitle', 'Booyah!');
   this.set('icon', 'my-icon');
   this.set('buttonText', 'Yeah boi');

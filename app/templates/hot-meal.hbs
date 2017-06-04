@@ -1,0 +1,29 @@
+<h1>Meals</h1>
+<h4>
+  Below you will find a list of locations that are ready to serve you
+  your next hot meal.
+</h4>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Day Time</th>
+        <th>Location</th>
+        <th>Meals Served</th>
+        <th>Name of Program</th>
+        <th>People Served</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each locations as |location|}}
+        <tr>
+          <td>{{location.dayTime}}</td>
+          <td>{{location.location}}</td>
+          <td>{{location.mealServed}}</td>
+          <td>{{location.nameOfProgram}}</td>
+          <td>{{location.peopleServed}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
