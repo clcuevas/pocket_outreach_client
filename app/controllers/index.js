@@ -1,10 +1,11 @@
 import Ember from 'ember';
 import { task } from 'ember-concurrency';
+import withTestWaiter from 'ember-concurrency-test-waiter/with-test-waiter';
 
 const { Controller } = Ember;
 
 export default Controller.extend({
-  getHotMealLocations: task(function * () {
+  getHotMealLocations: withTestWaiter(task(function * () {
     let meals = [];
 
     try {
@@ -22,5 +23,5 @@ export default Controller.extend({
       // TODO: Maybe do something better with the error
       throw err;
     }
-  })
+  }))
 });
