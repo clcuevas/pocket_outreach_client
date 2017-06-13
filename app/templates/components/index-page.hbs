@@ -28,8 +28,17 @@
 </div>
 <div class="row">
   {{thumbnail-service-type
+    classNames="js-hot-meal-thumbnail"
     iconName="utensils-icon"
     title="Find Free Meals"
     buttonText="Click Me"
     myAction=(action 'getHotMealLocations')}}
+</div>
+<div class="row">
+  {{thumbnail-service-type
+    classNames="js-food-banks-thumbnail"
+    iconName="utensils-icon"
+    title="Find Food Banks"
+    buttonText="Click Me"
+    myAction=(action 'getFoodBanks')}}
 </div>

@@ -1,16 +1,8 @@
 import DS from 'ember-data';
-import Ember from 'ember';
 
-const { RESTAdapter } = DS;
-const {
-  String: EmberString
-} = Ember;
+const { JSONAPIAdapter } = DS;
 
-export default RESTAdapter.extend({
+export default JSONAPIAdapter.extend({
   namespace: 'api',
-  host: 'http://localhost:3000',
-
-  pathForType(modelName) {
-    return EmberString.pluralize(modelName);
-  }
+  host: 'http://localhost:3000'
 });

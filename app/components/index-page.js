@@ -11,6 +11,13 @@ export default Component.extend({
       // TODO: Need to get user's location when this action
       // is performed/ executed.
       this.get('getHotMealLocations')();
+    },
+
+    getFoodBanks(e) {
+      e.preventDefault();
+      // TODO: Need to get user's location when this action
+      // is performed/ executed.
+      this.get('getFoodBanks')();
     }
   }
 });

@@ -18,17 +18,21 @@ cache:
 
 before_install:
   - npm config set spin false
-  - npm install -g bower
-  - bower --version
+  # - npm install -g bower
+  # - bower --version
+
+install:
+  - yarn install
+  # This is a workaround to fix the 'Cannot find module'
+  # bug. The bug is with yarn:
+  # (https://github.com/yarnpkg/yarn/issues/1981)
+  - npm rebuild node-sass
+  # - bower install
 
 before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start &
   - sleep 3
-
-install:
-  - yarn install
-  - bower install
 
 script:
   - yarn run test

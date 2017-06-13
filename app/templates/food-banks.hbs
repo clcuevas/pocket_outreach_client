@@ -1,0 +1,22 @@
+<h1>Food Banks</h1>
+<h4>Below you will find a list of the closes food banks near you.</h4>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Address</th>
+        <th>Name of Food Bank</th>
+        <th>Website</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each foodBanks as |foodBank|}}
+        <tr>
+          <td>{{foodBank.address}}</td>
+          <td>{{foodBank.commonName}}</td>
+          <td>{{foodBank.website}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
