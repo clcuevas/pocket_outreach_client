@@ -7,4 +7,4 @@ const {
 
 export default Controller.extend({
   foodBanks: readOnly('model')
-})
+});

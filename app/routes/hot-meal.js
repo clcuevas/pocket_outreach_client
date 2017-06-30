@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-const { Route } = Ember
+const { Route } = Ember;
 
 export default Route.extend({
   // Before we populate the model and render the view for this route,

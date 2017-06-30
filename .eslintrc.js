@@ -57,6 +57,7 @@ module.exports = {
     'quotes': 'off',
     'radix': 'error',
     'rest-spread-spacing': 'error',
+    'semi': 'error',
     'space-before-function-paren': [ 'error', 'never' ],
     'space-in-parens': 'error',
     'space-infix-ops': 'error',
