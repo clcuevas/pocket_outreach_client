@@ -3,7 +3,8 @@ module.exports = {
     'embertest': true
   },
   globals: {
-    'server': true
+    'server': true,
+    'sinon': true
   },
   rules: {
     'new-cap': [ 'error', { capIsNewExceptions: [ 'A', '$.Event' ] } ]

@@ -1,9 +1,8 @@
 /* eslint-env node */
-/* global require, module */
-var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
-  var app = new EmberApp(defaults, {
+  let app = new EmberApp(defaults, {
     'ember-bootstrap': {
       'bootstrapVersion': 3,
       'importBootstrapFont': true,
